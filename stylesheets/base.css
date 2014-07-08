@@ -1,0 +1,183 @@
+/*--THE GRID--*/
+
+.line, .row, .last-unit,
+.s-row {
+  display: block;
+  overflow: hidden;
+  *overflow: visible;
+  *zoom: 1;
+  width: 100%;
+}
+
+.last-unit{float:none;width:auto;_position:relative;_left:-3px;_margin-right:-3px;}
+
+.unit{float:left;}
+.unit-right{float:right;}
+.size1of1{width:100%;float:none;}
+.size1of2{width:50%;}
+.size1of3{width:33.33333%;}
+.size2of3{width:66.66666%;}
+.size1of4{width:25%;}
+.size3of4{width:75%;}
+.size1of5{width:20%;}
+.size2of5{width:40%;}
+.size3of5{width:60%;}
+.size4of5{width:80%;}
+.size1of6{width:16.66666%;}
+.size4of6{width:66.66666%;}
+.size5of6{width:83.33333%;}
+.size1of10{width:10%;}
+.size3of10{width:30%;}
+.size7of10{width:70%;}
+.size9of10{width: 90%}
+.size1of20{width:5%;}
+
+.inner {
+  display: block;
+  overflow: hidden;
+  *overflow: visible;
+  *zoom: 1;
+  padding:10px;
+}
+
+.header-inner {
+  display: block;
+  overflow: hidden;
+  *overflow: visible;
+  *zoom: 1;
+  padding:20px;
+}
+
+.spacer {
+  width: 10px;
+  height: 10px;
+}
+
+.double-spacer {
+  width: 20px;
+  height: 20px;
+}
+
+.large-spacer {
+  width: 50px;
+  height: 120px;
+}
+
+.giant-spacer {
+  width: 50px;
+  height: 200px;
+}
+
+/*--OO-STYLES--*/
+.inner-top {
+  padding-top: 10px;
+}
+
+.inner-bottom {
+  padding-bottom: 10px;
+}
+
+.inner-left {
+  padding-left: 10px;
+}
+
+.inner-right {
+  padding-right: 10px;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+/*--TYPOGRAPHY--*/
+.headline {
+  font-family: 'Satisfy', cursive;
+  color: #F78656;
+}
+
+h1, h2, h3, h4, h5, h6 , a{
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  color: #222222;
+  text-rendering: optimizeLegibility;
+  margin-top: 0.2em;
+  margin-bottom: 0.5em;
+  line-height: 1.2125em;
+}
+
+h1 {
+  font-size: 2.125em;
+}
+
+h2 {
+  font-size: 1.6875em;
+}
+
+h3 {
+  font-size: 1.375em;
+}
+
+h4 {
+  font-size: 1.125em;
+}
+
+h5 {
+  font-size: 1.125em;
+}
+
+h6 {
+  font-size: 1em;
+}
+
+p {
+ font-size: 1.5em;
+}
+
+a {
+  color: #FFF;
+  text-decoration: none
+}
+
+/*Styles*/
+
+.tam-divider {
+  background: url(../img/tam.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 200px;
+}
+
+html {
+  height: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: #2D2D2D;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.centered-content{
+  text-align: center;
+}
+
+.hide {
+  display: none;
+}
+
+/*Media Queries*/
+
+@media all and (max-width: 875px) {
+  .about p, .info p {
+    font-size: 1.2em;
+  }
+}
