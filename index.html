@@ -17,7 +17,7 @@
     </div>
     <div class="row">
       <div class="centered-content">
-        <img class="visage" src="img/rae-vogue.jpg"></img>
+        <img class="visage" src="img/rae-vogue.jpg">
       </div>
     </div>
     <div class="row">
@@ -50,16 +50,14 @@
           </p>
         </div>
       </div>
-      <div class="last-unit">
-      </div>
     </div>
-    <div class="row instagram">
-    <script type="text/javascript">
-      $.get( "https://api.instagram.com/v1/users/178162920/media/recent?client_id=e5ecc8cb303e44e2bbc7a1a43eeea118", function( response ) {
-        $( ".instagram" ).html( responses );
-        console.log( "Eat beets." );
-      });
-    </script>
+    <div class="row">
+      <div class="unit size1of4">
+        <div class="spacer"></div>
+      </div>
+      <div class="unit size1of2 instagram">
+      </div>
+
     </div>
     <div class="row links">
       <div class="unit size1of3">
@@ -81,6 +79,33 @@
       </div>
     </div>
   </div>
+  <script type="text/javascript">
+  function imageTemplate(url) {
+    return "<img src='" + url + "'>";
+  }
+
+  function parseImageData(data) {
+    var imageTags = [];
+    for(var i = 0, image; image = data[i]; i++) {
+      var url = image.images.standard_resolution.url;
+      var template = imageTemplate(url);
+      imageTags.push(template);
+    }
+    return imageTags.join("");
+  }
+
+   $.ajax({
+    type: "GET",
+    "method": "GET",
+    url: 'https://api.instagram.com/v1/users/38878930/media/recent?client_id=e5ecc8cb303e44e2bbc7a1a43eeea118',
+    dataType: "jsonp",
+    success: function(response){
+      var data = response.data;
+      var parsedImages = parseImageData(data);
+      $(".instagram").html(parsedImages);
+    }
+  });
+  </script>
 </body>
 
 </html>

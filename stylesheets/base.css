@@ -162,6 +162,13 @@ a:hover {
   width: 30%;
 }
 
+.instagram img {
+  height: 100px;
+  width: 100px;
+  overflow: hidden;
+  padding:10px;
+}
+
 .links {
   background-color: #fff;
 }
