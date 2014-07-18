@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <!-- viewport -->
   <title>Rae Bonfanti</title>
   <link type="text/css" href="stylesheets/base.css" rel="stylesheet">
   <link href="http://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.js"></script>
 </head>
 
 <body>
@@ -36,9 +36,8 @@
       </div>
       <div class="unit size3of5">
         <div class="inner">
-          <!-- <h2 class="bright">Coding</h2> -->
           <p>
-          I am a software engineer who embraces TDD and pair programming. My specialities include Ruby, hexagonal Rails, JavaScript, Backbone, OOCSS
+          I am a software engineer who embraces TDD and pair programming. My specialities include Ruby, hexagonal Rails, Javascript, Backbone, OOCSS
           and developing within a service-oriented architecture.
           </p>
           <p>
@@ -54,11 +53,13 @@
       <div class="last-unit">
       </div>
     </div>
-    <div class="row">
+    <div class="row instagram">
+    <script type="text/javascript">
       $.get( "https://api.instagram.com/v1/users/178162920/media/recent?client_id=e5ecc8cb303e44e2bbc7a1a43eeea118", function( response ) {
-        $( ".result" ).html( responses );
-        alert( "Load was performed." );
+        $( ".instagram" ).html( responses );
+        console.log( "Eat beets." );
       });
+    </script>
     </div>
     <div class="row links">
       <div class="unit size1of3">
