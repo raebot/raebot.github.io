@@ -2,9 +2,10 @@
 <html>
 <head>
   <title>Rae Bonfanti</title>
-  <link type="text/css" href="stylesheets/base.css" rel="stylesheet">
-  <link href="http://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet" type="text/css">
   <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.js"></script>
+  <script type="text/javascript" src="javascripts/instagram_feed.js" ></script>
+  <link type="text/css" href="stylesheets/base.css" rel="stylesheet">
+  <link type="text/css" href="http://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
 </head>
 
 <body>
@@ -12,14 +13,17 @@
     <div class="row">
       <div class="large-spacer"></div>
     </div>
+
     <div class="row inner-top">
       <h1 class="headline centered-content">Rae Bonfanti</h1>
     </div>
+
     <div class="row">
       <div class="centered-content">
         <img class="visage" src="img/rae-vogue.jpg">
       </div>
     </div>
+
     <div class="row">
       <div class="inner-bottom">
         <div class="centered-content">
@@ -28,8 +32,10 @@
         </div>
       </div>
     </div>
+
     <div class="row tam-divider bordered">
     </div>
+
     <div class="row about">
       <div class="unit size1of5">
         <div class="spacer"></div>
@@ -37,7 +43,7 @@
       <div class="unit size3of5">
         <div class="inner">
           <p>
-          I am a software engineer who embraces TDD and pair programming. My specialities include Ruby, hexagonal Rails, Javascript, Backbone, OOCSS
+          I'm a software engineer who embraces TDD and pair programming. My specialities include Ruby, hexagonal Rails, Javascript, Backbone, OOCSS
           and developing within a service-oriented architecture.
           </p>
           <p>
@@ -48,61 +54,35 @@
         </div>
       </div>
     </div>
+
     <div class="row">
-      <div class="unit size1of4">
+      <div class="unit size1of6">
         <div class="spacer"></div>
       </div>
-      <div class="unit size1of2 instagram">
+      <div class="unit size3of4 instagram">
       </div>
-
     </div>
+
     <div class="row links">
       <div class="unit size1of3">
         <div class="spacer"></div>
       </div>
       <div class="unit size1of3">
-      <div class="centered-content">
+        <div class="centered-content">
           <div class="inner">
-            <div class="unit size1of2">
+            <div class="unit size1of3">
               <a href="https://github.com/raebot">GitHub</a>
             </div>
-            <div class="unit size1of2">
+            <div class="unit size1of3">
+              <a href="https://twitter.com/whoisrae">Twiiter</a>
+            </div>
+            <div class="unit size1of3">
              <a href="www.linkedin.com/in/raebonfanti/">LinkedIn</a>
             </div>
           </div>
         </div>
       </div>
-      <div class="last-unit">
-      </div>
     </div>
   </div>
-  <script type="text/javascript">
-  function imageTemplate(url) {
-    return "<img src='" + url + "'>";
-  }
-
-  function parseImageData(data) {
-    var imageTags = [];
-    for(var i = 0, image; image = data[i]; i++) {
-      var url = image.images.standard_resolution.url;
-      var template = imageTemplate(url);
-      imageTags.push(template);
-    }
-    return imageTags.join("");
-  }
-
-   $.ajax({
-    type: "GET",
-    "method": "GET",
-    url: 'https://api.instagram.com/v1/users/38878930/media/recent?client_id=e5ecc8cb303e44e2bbc7a1a43eeea118',
-    dataType: "jsonp",
-    success: function(response){
-      var data = response.data;
-      var parsedImages = parseImageData(data);
-      $(".instagram").html(parsedImages);
-    }
-  });
-  </script>
 </body>
-
 </html>
