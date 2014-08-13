@@ -5,10 +5,4 @@ $(document).ready(function($){
       $(this).toggleClass('animated swing');
     }
   );
-
-  $('.visage').hover(
-    function toggleWobbleAnimation(){
-      $(this).toggleClass('animated wobble');
-    }
-  );
 });
