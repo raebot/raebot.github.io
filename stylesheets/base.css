@@ -101,7 +101,7 @@ h1, h2, h3, h4, h5, h6 , a {
 }
 
 h1 {
-  font-size: 5em;
+  font-size: 2em;
 }
 
 .headline h1 {
@@ -159,6 +159,17 @@ a:hover {
   width: 200px ;
 }
 
+.link a {
+  padding: .25em;
+  margin: .25em;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+.link {
+  display: inline-block;
+}
+
 body {
   background-color: #fff;
   margin: 0;
@@ -170,7 +181,11 @@ body {
   text-align: center;
 }
 
-.hide {
+.small-full-width {
+  width: 100%;
+}
+
+.show-large, .show-medium {
   display: none;
 }
 
@@ -181,9 +196,48 @@ body {
 }
 
 /*Media Queries*/
+@media all and (min-width: 400px) {
+  h1 {
+    font-size: 3em;
+  }
 
-@media all and (max-width: 875px) {
-  .about p, .info p {
-    font-size: 1.2em;
+  .show-small {
+    display: none;
+  }
+
+  .show-medium {
+    display: block;
+  }
+
+  .small-full-width {
+    width: auto;
+  }
+
+  .medium-full-width {
+    width: 100%;
+  }
+}
+
+@media all and (min-width: 820px) {
+  h1 {
+    font-size: 4em;
+  }
+
+  .show-medium {
+    display: none;
+  }
+
+  .show-large {
+    display: block;
+  }
+
+  .medium-full-width {
+    width: auto;
+  }
+}
+
+@media all and (min-width: 975px) {
+  h1 {
+    font-size: 5em;
   }
 }
