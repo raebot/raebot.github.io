@@ -35,6 +35,12 @@ a:hover {
   color:#B565A7;
 }
 
+.a--current {
+  color: #B565A7;
+  text-decoration: underline;
+  text-decoration-thickness: 0.8em;
+}
+
 /*Styles*/
 body {
   background-color: #fff;
@@ -89,7 +95,14 @@ body {
 }
 
 /*Media Queries*/
-@media all and (min-width: 374px) {
+@media print {
+  .flowers {
+    font-size: 2em;
+    color: #344055;
+  }
+}
+
+@media screen and (min-width: 374px) {
   h1 {
     font-size: 2em;
   }
@@ -100,7 +113,7 @@ body {
   }
 }
 
-@media all and (min-width: 531px) {
+@media screen and (min-width: 531px) {
   .content {
     margin-top: 2em;
   }
@@ -111,7 +124,7 @@ body {
   }
 }
 
-@media all and (min-width: 820px) {
+@media screen and (min-width: 820px) {
   h1 {
     font-size: 3em;
     letter-spacing: 26px;
@@ -122,7 +135,7 @@ body {
   }
 }
 
-@media all and (min-width: 975px) {
+@media screen and (min-width: 975px) {
   h1 {
     font-size: 4em;
   }

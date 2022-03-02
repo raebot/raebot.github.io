@@ -1,0 +1,65 @@
+.resume {
+  max-width: 750px;
+  margin-top: 3em;
+}
+
+.resume__section-header {
+  margin-top: 1.2em;
+  margin-bottom: 0;
+}
+
+.resume__element {
+  margin-top: 0.8em;
+  margin-bottom: 0;
+}
+
+.resume__element + .resume__element {
+  margin-top: 1.2em;
+}
+
+.resume__detail-highlights {
+  margin-top: 0.5em;
+  margin-bottom: 0;
+}
+
+.resume__detail-highlights + .resume__detail-highlights {
+  font-style: italic;
+}
+
+.resume__detail {
+  margin-top: 1em;
+  padding-left: 2em;
+}
+
+.resume__detail-item {
+  margin-top: 0.8em;
+}
+
+.resume__detail-emphasis {
+  font-weight: 700;
+}
+
+@media print {
+  .resume {
+    margin-top: 2em;
+  }
+
+  .resume h1 {
+    letter-spacing: 0.2em;
+  }
+  .resume__section-header {
+    margin-top: 0;
+  }
+
+  .resume__element {
+    margin-top: 0.8em;
+  }
+
+  .resume p {
+    font-size: 0.6em;
+  }
+
+  .navigation {
+    display: none;
+  }
+}
